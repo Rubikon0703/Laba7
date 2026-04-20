@@ -17,17 +17,26 @@ namespace Laba7
                 string line;
                 while ((line = sr.ReadLine()) != null)
                     if (int.TryParse(line, out int num))
+                    {
                         numbers.Add(num);
+                    }
             }
             if (numbers.Count % 2 != 0)
+            {
                 throw new InvalidOperationException(
                     "Количество элементов файла нечётно.");
+            }
             int half = numbers.Count / 2;
             int sumFirst = 0, sumSecond = 0;
-            for (int i = 0; i < half; i++) sumFirst +=
+            for (int i = 0; i < half; i++)
+            {
+                sumFirst +=
                     numbers[i];
+            }
             for (int i = half; i < numbers.Count; i++)
+            { 
                 sumSecond += numbers[i];
+            }
             return sumFirst - sumSecond;
         }
         public static void FillTextFileSingle(string path,
@@ -37,7 +46,9 @@ namespace Laba7
             using (StreamWriter sw = new StreamWriter(path))
             {
                 for (int i = 0; i < count; i++)
+                {
                     sw.WriteLine(rnd.Next(-100, 101));
+                }
             }
         }
 
@@ -54,8 +65,12 @@ namespace Laba7
                         new char[] { ' ', '\t' },
                         StringSplitOptions.RemoveEmptyEntries);
                     foreach (string part in parts)
+                    {
                         if (int.TryParse(part, out int num))
+                        {
                             totalSum += num;
+                        }
+                    }
                 }
             }
             return totalSum;
@@ -74,7 +89,10 @@ namespace Laba7
                     for (int j = 0; j < count; j++)
                     {
                         sb.Append(rnd.Next(-50, 51));
-                        if (j < count - 1) sb.Append(' ');
+                        if (j < count - 1)
+                        {
+                            sb.Append(' ');
+                        }
                     }
                     sw.WriteLine(sb.ToString());
                 }
@@ -90,19 +108,27 @@ namespace Laba7
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
+                {
                     lines.Add(line);
+                }
             }
             if (lines.Count == 0)
-                throw new 
+            {
+                throw new
                     InvalidOperationException("Файл пуст.");
+            }
             string shortest = lines[0];
             string longest = lines[0];
             for (int i = 1; i < lines.Count; i++)
             {
                 if (lines[i].Length < shortest.Length)
+                {
                     shortest = lines[i];
+                }
                 if (lines[i].Length > longest.Length)
+                {
                     longest = lines[i];
+                }
             }
             using (StreamWriter sw =
                 new StreamWriter(outputFilePath))
@@ -124,14 +150,20 @@ namespace Laba7
             {
                 while (br.BaseStream.Position <
                     br.BaseStream.Length)
+                {
                     numbers.Add(br.ReadInt32());
+                }
             }
             using (BinaryWriter bw = new BinaryWriter(
                 File.Open(outputFilePath, FileMode.Create)))
             {
                 foreach (int num in numbers)
+                {
                     if (num % 2 == 0)
+                    {
                         bw.Write(num);
+                    }
+                }
             }
         }
         public static void FillBinaryFileNumbers(string path,
@@ -142,7 +174,9 @@ namespace Laba7
                 File.Open(path, FileMode.Create)))
             {
                 for (int i = 0; i < count; i++)
+                {
                     bw.Write(rnd.Next(-100, 101));
+                }
             }
         }
 
@@ -198,16 +232,20 @@ namespace Laba7
                 passengers = (List<PassengerBaggage>)
                     serializer.Deserialize(fs);
             if (passengers == null || passengers.Count == 0)
+            {
                 throw new InvalidOperationException(
                     "Файл не содержит данных.");
+            }
             int totalItems = 0;
             double totalWeight = 0.0;
             foreach (PassengerBaggage pb in passengers)
+            {
                 foreach (BaggageItem item in pb.Items)
                 {
                     totalItems++;
                     totalWeight += item.Weight;
                 }
+            }
             double overallAvg = totalWeight / totalItems;
             Console.WriteLine(
                 $"Общая средняя масса единицы багажа:" +
@@ -220,7 +258,9 @@ namespace Laba7
                 PassengerBaggage pb = passengers[i];
                 double sumWeight = 0.0;
                 foreach (BaggageItem item in pb.Items)
+                {
                     sumWeight += item.Weight;
+                }
                 double avg = sumWeight / pb.Items.Length;
                 if (Math.Abs(avg - overallAvg) <= m)
                 {
@@ -230,12 +270,17 @@ namespace Laba7
                         $"средняя масса = {avg:F2} кг");
                     Console.WriteLine("Состав:");
                     foreach (BaggageItem item in pb.Items)
+                    {
                         Console.WriteLine(
                             $"  - {item.Name}: " +
                             $"{item.Weight:F2} кг");
+                    }
                 }
             }
-            if (!found) Console.WriteLine("Багаж не найден.");
+            if (!found)
+            {
+                Console.WriteLine("Багаж не найден.");
+            }
         }
     }
 }

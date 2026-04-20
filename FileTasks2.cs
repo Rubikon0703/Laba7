@@ -15,8 +15,10 @@ namespace Laba7
                 new char[] { ' ', '\t' },
                 StringSplitOptions.RemoveEmptyEntries);
             foreach (string p in parts)
+            {
                 if (int.TryParse(p, out int num))
                     list.Add(num);
+            }
             if (list.Count == 0)
             {
                 Console.WriteLine("Список пуст.");
@@ -34,10 +36,12 @@ namespace Laba7
                 Console.ReadKey();
                 return;
             }
-        
+
             for (int i = list.Count - 1; i >= 0; i--)
                 if (list[i] == e)
+                {
                     list.RemoveAt(i);
+                }
             Console.WriteLine
                 ("Результат: " + string.Join(" ", list));
             Console.WriteLine(
@@ -56,8 +60,12 @@ namespace Laba7
                 new char[] { ' ', '\t' },
                 StringSplitOptions.RemoveEmptyEntries);
             foreach (string p in parts)
+            {
                 if (int.TryParse(p, out int num))
+                {
                     linkedList.AddLast(num);
+                }
+            }
             if (linkedList.Count == 0)
             {
                 Console.WriteLine("Список пуст.");
@@ -90,7 +98,9 @@ namespace Laba7
                 StringSplitOptions.RemoveEmptyEntries);
             HashSet<string> allFirmsSet = new HashSet<string>();
             foreach (string f in allFirms)
+            {
                 allFirmsSet.Add(f);
+            }
             if (allFirmsSet.Count == 0)
             {
                 Console.WriteLine("Список фирм пуст.");
@@ -114,12 +124,18 @@ namespace Laba7
                 HashSet<string> schoolSet =
                     new HashSet<string>();
                 foreach (string b in buys)
+                {
                     if (allFirmsSet.Contains(b))
+                    {
                         schoolSet.Add(b);
+                    }
                     else
+                    {
                         Console.WriteLine(
                             $"Фирма '{b}' " +
                             $"не в общем списке, пропущена.");
+                    }
+                }
                 schoolsPurchases.Add(schoolSet);
             }
           
@@ -129,7 +145,9 @@ namespace Laba7
             {
                 Console.Write($"   Заведение {i + 1}: ");
                 if (schoolsPurchases[i].Count == 0)
+                {
                     Console.WriteLine("не закупало нигде");
+                }
                 else
                 {
                     List<string> list =
@@ -140,16 +158,22 @@ namespace Laba7
            
             HashSet<string> union = new HashSet<string>();
             foreach (var set in schoolsPurchases)
+            {
                 foreach (string firm in set)
+                {
                     union.Add(firm);
+                }
+            }
             Console.WriteLine(
                 "\n2) Фирмы, где закупало" +
                 " хотя бы одно заведение:");
             if (union.Count == 0)
+            {
                 Console.WriteLine("   нет таких");
+            }
             else
             {
-                List<string> unionList = 
+                List<string> unionList =
                     new List<string>(union);
                 Console.WriteLine
                     ("   " + string.Join(", ", unionList));
@@ -158,14 +182,18 @@ namespace Laba7
             HashSet<string> notBought =
                 new HashSet<string>(allFirmsSet);
             foreach (string firm in union)
+            {
                 notBought.Remove(firm);
+            }
             Console.WriteLine(
                 "\n3) Фирмы, где ни одно" +
                 " заведение не закупало:");
             if (notBought.Count == 0)
+            {
                 Console.WriteLine(
                     "   нет таких" +
                     " (все фирмы были использованы)");
+            }
             else
             {
                 List<string> notList =
@@ -203,14 +231,18 @@ namespace Laba7
             };
             HashSet<char> voicedSet = new HashSet<char>();
             foreach (char c in voicedConsonants)
+            {
                 voicedSet.Add(c);
+            }
             HashSet<char> foundLetters = new HashSet<char>();
             foreach (string word in words)
             {
                 foreach (char ch in word.ToLower())
                 {
                     if (voicedSet.Contains(ch))
+                    {
                         foundLetters.Add(ch);
+                    }
                 }
             }
           
@@ -275,7 +307,10 @@ namespace Laba7
                 string[] parts = lines[i].Trim().Split(
                     new char[] { ' ' },
                     StringSplitOptions.RemoveEmptyEntries);
-                if (parts.Length < 2) continue;
+                if (parts.Length < 2)
+                {
+                    continue;
+                }
                 string surname = parts[0];
                 if (!surnameCount.ContainsKey(surname))
                 {
