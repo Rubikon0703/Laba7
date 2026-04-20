@@ -16,10 +16,12 @@ namespace Laba7
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
+                {
                     if (int.TryParse(line, out int num))
                     {
                         numbers.Add(num);
                     }
+                }
             }
             if (numbers.Count % 2 != 0)
             {
