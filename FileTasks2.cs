@@ -246,10 +246,13 @@ namespace Laba7
         public static void Task10()
         {
             Console.WriteLine(
-                "\n=== Задание 10: логины из файла ===");
-            string filePath = InputValidator.GetExistingFilePath(
-                "Укажите путь к текстовому файлу с данными учеников: ");
-            string[] lines = File.ReadAllLines(filePath, Encoding.UTF8);
+                "\nЗадание 10: логины из файла");
+            string filePath = 
+                InputValidator.GetExistingFilePath(
+                "Укажите путь к текстовому" +
+                " файлу с данными учеников: ");
+            string[] lines = 
+                File.ReadAllLines(filePath, Encoding.UTF8);
             if (lines.Length == 0)
             {
                 Console.WriteLine("Файл пуст.");
@@ -259,7 +262,8 @@ namespace Laba7
             if (!int.TryParse(lines[0], out int n) || n <= 0)
             {
                 Console.WriteLine(
-                    "Первая строка должна содержать положительное число.");
+                    "Первая строка должна " +
+                    "содержать положительное число.");
                 Console.ReadKey();
                 return;
             }

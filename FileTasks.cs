@@ -30,7 +30,8 @@ namespace Laba7
                 sumSecond += numbers[i];
             return sumFirst - sumSecond;
         }
-        public static void FillTextFileSingle(string path, int count)
+        public static void FillTextFileSingle(string path,
+            int count)
         {
             Random rnd = new Random();
             using (StreamWriter sw = new StreamWriter(path))
@@ -43,7 +44,8 @@ namespace Laba7
         public static int Task2(string inputFilePath)
         {
             int totalSum = 0;
-            using (StreamReader sr = new StreamReader(inputFilePath))
+            using (StreamReader sr =
+                new StreamReader(inputFilePath))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -66,7 +68,8 @@ namespace Laba7
             {
                 for (int i = 0; i < lines; i++)
                 {
-                    int count = rnd.Next(1, maxNumbersPerLine + 1);
+                    int count =
+                        rnd.Next(1, maxNumbersPerLine + 1);
                     StringBuilder sb = new StringBuilder();
                     for (int j = 0; j < count; j++)
                     {
@@ -131,7 +134,8 @@ namespace Laba7
                         bw.Write(num);
             }
         }
-        public static void FillBinaryFileNumbers(string path, int count)
+        public static void FillBinaryFileNumbers(string path,
+            int count)
         {
             Random rnd = new Random();
             using (BinaryWriter bw = new BinaryWriter(
@@ -156,18 +160,23 @@ namespace Laba7
     int passengerCount, int maxItemsPerPassenger)
         {
             Random rnd = new Random();
-            string[] itemNames = { "Чемодан", "Сумка", "Коробка",
-        "Рюкзак", "Саквояж" };
+            string[] itemNames = { "Чемодан",
+                "Сумка", "Коробка",
+                "Рюкзак", "Саквояж" };
             List<PassengerBaggage> passengers =
                 new List<PassengerBaggage>();
             for (int i = 0; i < passengerCount; i++)
             {
-                int itemCount = rnd.Next(1, maxItemsPerPassenger + 1);
-                BaggageItem[] items = new BaggageItem[itemCount];
+                int itemCount =
+                    rnd.Next(1, maxItemsPerPassenger + 1);
+                BaggageItem[] items =
+                    new BaggageItem[itemCount];
                 for (int j = 0; j < itemCount; j++)
                 {
-                    items[j].Name = itemNames[rnd.Next(itemNames.Length)];
-                    items[j].Weight = rnd.Next(1, 30) + rnd.NextDouble();
+                    items[j].Name =
+                        itemNames[rnd.Next(itemNames.Length)];
+                    items[j].Weight =
+                        rnd.Next(1, 30) + rnd.NextDouble();
                 }
                 PassengerBaggage pb = new PassengerBaggage();
                 pb.Items = items;
