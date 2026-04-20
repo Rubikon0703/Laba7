@@ -63,39 +63,31 @@ namespace Laba7
 
         static void RunTask1()
         {
-            string fileName = 
-                InputValidator.GetExistingFilePath(
-                "Укажите путь к текстовому файлу " +
-                "(числа по одному): ");
-            try
-            {
-                int result = FileTasks.Task1(fileName);
-                Console.WriteLine(
-                    $"Разность суммы первой и " +
-                    $"второй половин = {result}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка: {ex.Message}");
-            }
+            string fileName = InputValidator.GetNonEmptyString(
+                "Имя файла для генерации: ");
+            int count = InputValidator.GetEvenPositiveInt(
+                "Количество чисел (чётное): ");
+            FileTasks.FillTextFileSingle(fileName, count);
+            Console.WriteLine(
+                $"Файл {fileName} заполнен {count} числами.");
+            int result = FileTasks.Task1(fileName);
+            Console.WriteLine(
+                $"Разность суммы первой и второй половин = {result}");
             Console.ReadKey();
         }
 
         static void RunTask2()
         {
-            string fileName = 
-                InputValidator.GetExistingFilePath(
-                    "Укажите путь к " +
-                    "текстовому файлу (несколько чисел): ");
-            try
-            {
-                int sum = FileTasks.Task2(fileName);
-                Console.WriteLine($"Сумма всех чисел = {sum}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка: {ex.Message}");
-            }
+            string fileName = InputValidator.GetNonEmptyString(
+                "Имя файла для генерации: ");
+            int lines = InputValidator.GetPositiveInt(
+                "Количество строк: ");
+            int maxNum = InputValidator.GetPositiveInt(
+                "Максимум чисел в строке: ");
+            FileTasks.FillTextFileMultiple(fileName, lines, maxNum);
+            Console.WriteLine($"Файл {fileName} заполнен.");
+            int sum = FileTasks.Task2(fileName);
+            Console.WriteLine($"Сумма всех чисел = {sum}");
             Console.ReadKey();
         }
 
@@ -122,41 +114,32 @@ namespace Laba7
 
         static void RunTask4()
         {
-            string inputFile = 
-                InputValidator.GetExistingFilePath(
-                "Укажите путь к входному бинарному файлу: ");
-            string outputFile = 
-                InputValidator.GetNonEmptyString(
-                "Укажите имя выходного бинарного файла: ");
-            try
-            {
-                FileTasks.Task4(inputFile, outputFile);
-                Console.WriteLine(
-                    $"Чётные числа скопированы в {outputFile}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка: {ex.Message}");
-            }
+            string inputFile = InputValidator.GetNonEmptyString(
+                "Имя входного бинарного файла: ");
+            int count = InputValidator.GetPositiveInt(
+                "Количество случайных чисел: ");
+            FileTasks.FillBinaryFileNumbers(inputFile, count);
+            string outputFile = InputValidator.GetNonEmptyString(
+                "Имя выходного бинарного файла: ");
+            FileTasks.Task4(inputFile, outputFile);
+            Console.WriteLine(
+                $"Чётные числа скопированы в {outputFile}");
             Console.ReadKey();
         }
 
         static void RunTask5()
         {
-            string fileName = 
-                InputValidator.GetExistingFilePath(
-                "Укажите путь к XML-файлу с данными багажа: ");
-            double m = 
-                InputValidator.GetNonNegativeDouble(
+            string fileName = InputValidator.GetNonEmptyString(
+                "Имя XML-файла: ");
+            int passCount = InputValidator.GetPositiveInt(
+                "Количество пассажиров: ");
+            int maxItems = InputValidator.GetPositiveInt(
+                "Максимум предметов на пассажира: ");
+            FileTasks.FillBinaryFileBaggage(fileName, passCount, maxItems);
+            Console.WriteLine($"Файл {fileName} создан.");
+            double m = InputValidator.GetNonNegativeDouble(
                 "Введите допустимое отклонение m (кг): ");
-            try
-            {
-                FileTasks.Task5(fileName, m);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка: {ex.Message}");
-            }
+            FileTasks.Task5(fileName, m);
             Console.ReadKey();
         }
     }

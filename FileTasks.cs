@@ -1,4 +1,5 @@
 ﻿
+using System.Text;
 using System.Xml.Serialization;
 
 namespace Laba7
@@ -29,8 +30,16 @@ namespace Laba7
                 sumSecond += numbers[i];
             return sumFirst - sumSecond;
         }
+        public static void FillTextFileSingle(string path, int count)
+        {
+            Random rnd = new Random();
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                for (int i = 0; i < count; i++)
+                    sw.WriteLine(rnd.Next(-100, 101));
+            }
+        }
 
-       
         public static int Task2(string inputFilePath)
         {
             int totalSum = 0;
@@ -49,8 +58,26 @@ namespace Laba7
             }
             return totalSum;
         }
+        public static void FillTextFileMultiple(string path,
+    int lines, int maxNumbersPerLine)
+        {
+            Random rnd = new Random();
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                for (int i = 0; i < lines; i++)
+                {
+                    int count = rnd.Next(1, maxNumbersPerLine + 1);
+                    StringBuilder sb = new StringBuilder();
+                    for (int j = 0; j < count; j++)
+                    {
+                        sb.Append(rnd.Next(-50, 51));
+                        if (j < count - 1) sb.Append(' ');
+                    }
+                    sw.WriteLine(sb.ToString());
+                }
+            }
+        }
 
-       
         public static void Task3(string inputFilePath,
                                  string outputFilePath)
         {
@@ -104,8 +131,17 @@ namespace Laba7
                         bw.Write(num);
             }
         }
+        public static void FillBinaryFileNumbers(string path, int count)
+        {
+            Random rnd = new Random();
+            using (BinaryWriter bw = new BinaryWriter(
+                File.Open(path, FileMode.Create)))
+            {
+                for (int i = 0; i < count; i++)
+                    bw.Write(rnd.Next(-100, 101));
+            }
+        }
 
-      
         public struct BaggageItem
         {
             public string Name;
@@ -116,7 +152,33 @@ namespace Laba7
         {
             public BaggageItem[] Items;
         }
-
+        public static void FillBinaryFileBaggage(string path,
+    int passengerCount, int maxItemsPerPassenger)
+        {
+            Random rnd = new Random();
+            string[] itemNames = { "Чемодан", "Сумка", "Коробка",
+        "Рюкзак", "Саквояж" };
+            List<PassengerBaggage> passengers =
+                new List<PassengerBaggage>();
+            for (int i = 0; i < passengerCount; i++)
+            {
+                int itemCount = rnd.Next(1, maxItemsPerPassenger + 1);
+                BaggageItem[] items = new BaggageItem[itemCount];
+                for (int j = 0; j < itemCount; j++)
+                {
+                    items[j].Name = itemNames[rnd.Next(itemNames.Length)];
+                    items[j].Weight = rnd.Next(1, 30) + rnd.NextDouble();
+                }
+                PassengerBaggage pb = new PassengerBaggage();
+                pb.Items = items;
+                passengers.Add(pb);
+            }
+            XmlSerializer serializer = new XmlSerializer(
+                typeof(List<PassengerBaggage>));
+            using (FileStream fs = new FileStream(path,
+                FileMode.Create))
+                serializer.Serialize(fs, passengers);
+        }
         public static void Task5(string inputFilePath, double m)
         {
             List<PassengerBaggage> passengers;

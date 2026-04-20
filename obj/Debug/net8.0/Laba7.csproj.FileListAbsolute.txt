@@ -12,3 +12,4 @@ C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\refint\Laba7.dll
 C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.pdb
 C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.genruntimeconfig.cache
 C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\ref\Laba7.dll
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.sourcelink.json
