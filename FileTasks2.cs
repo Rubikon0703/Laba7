@@ -242,33 +242,36 @@ namespace Laba7
             Console.ReadKey();
         }
 
-       
+
         public static void Task10()
         {
             Console.WriteLine(
-                "\nЗадание 10: " +
-                "формирование логинов по фамилиям");
-            int n = InputValidator.GetPositiveInt(
-                "Введите количество учеников: ");
+                "\n=== Задание 10: логины из файла ===");
+            string filePath = InputValidator.GetExistingFilePath(
+                "Укажите путь к текстовому файлу с данными учеников: ");
+            string[] lines = File.ReadAllLines(filePath, Encoding.UTF8);
+            if (lines.Length == 0)
+            {
+                Console.WriteLine("Файл пуст.");
+                Console.ReadKey();
+                return;
+            }
+            if (!int.TryParse(lines[0], out int n) || n <= 0)
+            {
+                Console.WriteLine(
+                    "Первая строка должна содержать положительное число.");
+                Console.ReadKey();
+                return;
+            }
             Dictionary<string, int> surnameCount =
                 new Dictionary<string, int>();
             List<string> logins = new List<string>();
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n && i < lines.Length; i++)
             {
-                Console.Write
-                    ($"Ученик {i + 1} (Фамилия Имя): ");
-                string line = Console.ReadLine().Trim();
-                string[] parts = line.Split(
+                string[] parts = lines[i].Trim().Split(
                     new char[] { ' ' },
                     StringSplitOptions.RemoveEmptyEntries);
-                if (parts.Length < 2)
-                {
-                    Console.WriteLine(
-                        "   Ошибка: " +
-                        "нужны фамилия и имя. Пропуск.");
-                    logins.Add("?");
-                    continue;
-                }
+                if (parts.Length < 2) continue;
                 string surname = parts[0];
                 if (!surnameCount.ContainsKey(surname))
                 {
