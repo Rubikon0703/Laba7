@@ -1,0 +1,14 @@
+C:\Users\sterh\source\repos\Laba7\bin\Debug\net8.0\Laba7.exe
+C:\Users\sterh\source\repos\Laba7\bin\Debug\net8.0\Laba7.deps.json
+C:\Users\sterh\source\repos\Laba7\bin\Debug\net8.0\Laba7.runtimeconfig.json
+C:\Users\sterh\source\repos\Laba7\bin\Debug\net8.0\Laba7.dll
+C:\Users\sterh\source\repos\Laba7\bin\Debug\net8.0\Laba7.pdb
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.AssemblyInfoInputs.cache
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.AssemblyInfo.cs
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.csproj.CoreCompileInputs.cache
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.dll
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\refint\Laba7.dll
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.pdb
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\Laba7.genruntimeconfig.cache
+C:\Users\sterh\source\repos\Laba7\obj\Debug\net8.0\ref\Laba7.dll

@@ -1,0 +1,22 @@
+<ArrayOfPassengerBaggage>
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Чемодан</Name>
+        <Weight>12.5</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Сумка</Name>
+        <Weight>3.2</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Рюкзак</Name>
+        <Weight>5.0</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+</ArrayOfPassengerBaggage>

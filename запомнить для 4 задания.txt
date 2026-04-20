@@ -1,0 +1,8 @@
+$fs = [System.IO.File]::OpenRead("4.bin"); $br = New-Object System.IO.BinaryReader($fs); while ($br.BaseStream.Position -lt $br.BaseStream.Length) { $br.ReadInt32() }; $br.Close(); $fs.Close()
+
+
+
+
+
+
+$fs = [System.IO.File]::OpenRead("4(выходной).bin"); $br = New-Object System.IO.BinaryReader($fs); while ($br.BaseStream.Position -lt $br.BaseStream.Length) { $br.ReadInt32() }; $br.Close(); $fs.Close()
