@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\sterh\\source\\repos\\Laba7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\filetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:filetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,33 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FileTasks.cs",
               "DocumentMoniker": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks.cs",
               "RelativeDocumentMoniker": "FileTasks.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks.cs",
               "RelativeToolTip": "FileTasks.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAuwJIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAH4BAAAAAAAAAAAwwKIBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T18:16:26.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FileTasks2.cs",
               "DocumentMoniker": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks2.cs",
               "RelativeDocumentMoniker": "FileTasks2.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks2.cs",
               "RelativeToolTip": "FileTasks2.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAcwEcBAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAcwFEBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:16:24.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T18:16:24.804Z"
             },
             {
               "$type": "Document",
@@ -62,10 +61,9 @@
               "RelativeDocumentMoniker": "Validator.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\Validator.cs",
               "RelativeToolTip": "Validator.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvwYAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T05:44:28.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T05:44:28.825Z"
             },
             {
               "$type": "Document",
@@ -75,10 +73,9 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwD8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:16:16.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T18:16:16.097Z"
             }
           ]
         }

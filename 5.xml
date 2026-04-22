@@ -3,16 +3,40 @@
   <PassengerBaggage>
     <items>
       <BaggageItem>
-        <Name>Рюкзак</Name>
-        <Weight>12.78</Weight>
+        <Name>Сумка</Name>
+        <Weight>25.08</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Чемодан</Name>
+        <Weight>19.44</Weight>
+      </BaggageItem>
+    </items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <items>
+      <BaggageItem>
+        <Name>Коробка</Name>
+        <Weight>4.65</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Коробка</Name>
+        <Weight>3.83</Weight>
       </BaggageItem>
       <BaggageItem>
         <Name>Рюкзак</Name>
-        <Weight>10.29</Weight>
+        <Weight>10.24</Weight>
+      </BaggageItem>
+    </items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <items>
+      <BaggageItem>
+        <Name>Сумка</Name>
+        <Weight>29.33</Weight>
       </BaggageItem>
       <BaggageItem>
-        <Name>Рюкзак</Name>
-        <Weight>5.35</Weight>
+        <Name>Чемодан</Name>
+        <Weight>15.92</Weight>
       </BaggageItem>
     </items>
   </PassengerBaggage>
@@ -20,51 +44,11 @@
     <items>
       <BaggageItem>
         <Name>Саквояж</Name>
-        <Weight>7.63</Weight>
+        <Weight>11.42</Weight>
       </BaggageItem>
       <BaggageItem>
         <Name>Сумка</Name>
-        <Weight>20.01</Weight>
-      </BaggageItem>
-      <BaggageItem>
-        <Name>Сумка</Name>
-        <Weight>8.92</Weight>
-      </BaggageItem>
-    </items>
-  </PassengerBaggage>
-  <PassengerBaggage>
-    <items>
-      <BaggageItem>
-        <Name>Рюкзак</Name>
-        <Weight>23.74</Weight>
-      </BaggageItem>
-      <BaggageItem>
-        <Name>Саквояж</Name>
-        <Weight>6.27</Weight>
-      </BaggageItem>
-      <BaggageItem>
-        <Name>Сумка</Name>
-        <Weight>11.2</Weight>
-      </BaggageItem>
-    </items>
-  </PassengerBaggage>
-  <PassengerBaggage>
-    <items>
-      <BaggageItem>
-        <Name>Чемодан</Name>
-        <Weight>18.86</Weight>
-      </BaggageItem>
-      <BaggageItem>
-        <Name>Чемодан</Name>
-        <Weight>11.09</Weight>
-      </BaggageItem>
-    </items>
-  </PassengerBaggage>
-  <PassengerBaggage>
-    <items>
-      <BaggageItem>
-        <Name>Рюкзак</Name>
-        <Weight>26.63</Weight>
+        <Weight>12.9</Weight>
       </BaggageItem>
     </items>
   </PassengerBaggage>
