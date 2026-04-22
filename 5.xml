@@ -1,51 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfPassengerBaggage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <PassengerBaggage>
-    <Items>
+    <items>
+      <BaggageItem>
+        <Name>Рюкзак</Name>
+        <Weight>12.78</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Рюкзак</Name>
+        <Weight>10.29</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Рюкзак</Name>
+        <Weight>5.35</Weight>
+      </BaggageItem>
+    </items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <items>
+      <BaggageItem>
+        <Name>Саквояж</Name>
+        <Weight>7.63</Weight>
+      </BaggageItem>
       <BaggageItem>
         <Name>Сумка</Name>
-        <Weight>21.742879927410623</Weight>
+        <Weight>20.01</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Сумка</Name>
+        <Weight>8.92</Weight>
+      </BaggageItem>
+    </items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <items>
+      <BaggageItem>
+        <Name>Рюкзак</Name>
+        <Weight>23.74</Weight>
       </BaggageItem>
       <BaggageItem>
         <Name>Саквояж</Name>
-        <Weight>16.108157021009035</Weight>
+        <Weight>6.27</Weight>
+      </BaggageItem>
+      <BaggageItem>
+        <Name>Сумка</Name>
+        <Weight>11.2</Weight>
+      </BaggageItem>
+    </items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <items>
+      <BaggageItem>
+        <Name>Чемодан</Name>
+        <Weight>18.86</Weight>
       </BaggageItem>
       <BaggageItem>
         <Name>Чемодан</Name>
-        <Weight>2.9245191154972314</Weight>
+        <Weight>11.09</Weight>
       </BaggageItem>
-    </Items>
+    </items>
   </PassengerBaggage>
   <PassengerBaggage>
-    <Items>
-      <BaggageItem>
-        <Name>Чемодан</Name>
-        <Weight>16.44669875854415</Weight>
-      </BaggageItem>
-    </Items>
-  </PassengerBaggage>
-  <PassengerBaggage>
-    <Items>
+    <items>
       <BaggageItem>
         <Name>Рюкзак</Name>
-        <Weight>27.416293658199685</Weight>
+        <Weight>26.63</Weight>
       </BaggageItem>
-      <BaggageItem>
-        <Name>Коробка</Name>
-        <Weight>24.92142464600473</Weight>
-      </BaggageItem>
-    </Items>
-  </PassengerBaggage>
-  <PassengerBaggage>
-    <Items>
-      <BaggageItem>
-        <Name>Коробка</Name>
-        <Weight>8.70201711761836</Weight>
-      </BaggageItem>
-      <BaggageItem>
-        <Name>Чемодан</Name>
-        <Weight>13.978639933834838</Weight>
-      </BaggageItem>
-    </Items>
+    </items>
   </PassengerBaggage>
 </ArrayOfPassengerBaggage>

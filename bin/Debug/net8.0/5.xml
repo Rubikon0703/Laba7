@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPassengerBaggage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Саквояж</Name>
+        <Weight>1.577851822241173</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Сумка</Name>
+        <Weight>2.584218958029868</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Чемодан</Name>
+        <Weight>5.722790401306639</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Чемодан</Name>
+        <Weight>6.366593615422049</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+  <PassengerBaggage>
+    <Items>
+      <BaggageItem>
+        <Name>Рюкзак</Name>
+        <Weight>16.13450916905419</Weight>
+      </BaggageItem>
+    </Items>
+  </PassengerBaggage>
+</ArrayOfPassengerBaggage>

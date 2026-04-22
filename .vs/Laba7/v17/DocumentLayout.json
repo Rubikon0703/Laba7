@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:filetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:filetasks2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|c:\\users\\sterh\\source\\repos\\laba7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D703E95-CEE1-407D-8E49-842C264203FA}|Laba7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,22 +36,23 @@
               "RelativeDocumentMoniker": "FileTasks.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks.cs",
               "RelativeToolTip": "FileTasks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAH4BAAAAAAAAAAAwwKIBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T18:16:26.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "FileTasks2.cs",
               "DocumentMoniker": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks2.cs",
               "RelativeDocumentMoniker": "FileTasks2.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\FileTasks2.cs",
               "RelativeToolTip": "FileTasks2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAcwFEBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:16:24.804Z"
+              "WhenOpened": "2026-04-20T18:16:24.804Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -61,19 +62,20 @@
               "RelativeDocumentMoniker": "Validator.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\Validator.cs",
               "RelativeToolTip": "Validator.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwBIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T18:16:21.827Z"
+              "WhenOpened": "2026-04-21T05:44:28.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sterh\\source\\repos\\Laba7\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\sterh\\source\\repos\\Laba7\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAcwDQAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwD8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T18:16:16.097Z",
               "EditorCaption": ""

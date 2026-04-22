@@ -89,8 +89,8 @@ namespace Laba7
 
         public static void Task8()
         {
-            Console.WriteLine(
-                "\n Задание 8: фирмы и учебные заведения");
+            Console.WriteLine
+                ("\nЗадание 8: фирмы и учебные заведения");
             Console.Write
                 ("Введите список всех фирм через пробел: ");
             string[] allFirms = Console.ReadLine().Split(
@@ -98,25 +98,20 @@ namespace Laba7
                 StringSplitOptions.RemoveEmptyEntries);
             HashSet<string> allFirmsSet = new HashSet<string>();
             foreach (string f in allFirms)
-            {
                 allFirmsSet.Add(f);
-            }
             if (allFirmsSet.Count == 0)
             {
                 Console.WriteLine("Список фирм пуст.");
-                Console.WriteLine(
-                  "\nНажмите любую клавишу для продолжения...");
                 Console.ReadKey();
                 return;
             }
-            int n = InputValidator.GetPositiveInt(
-                "Введите количество учебных заведений: ");
+            int n = InputValidator.GetPositiveInt
+                ("Введите количество учебных заведений: ");
             List<HashSet<string>> schoolsPurchases =
                 new List<HashSet<string>>();
             for (int i = 0; i < n; i++)
             {
-                Console.Write(
-                    $"Заведение {i + 1}: " +
+                Console.Write($"Заведение {i + 1}: " +
                     $"введите фирмы (через пробел): ");
                 string[] buys = Console.ReadLine().Split(
                     new char[] { ' ', '\t' },
@@ -126,83 +121,113 @@ namespace Laba7
                 foreach (string b in buys)
                 {
                     if (allFirmsSet.Contains(b))
-                    {
                         schoolSet.Add(b);
-                    }
                     else
-                    {
-                        Console.WriteLine(
-                            $"Фирма '{b}' " +
-                            $"не в общем списке, пропущена.");
-                    }
+                        Console.WriteLine($"Фирма '{b}'" +
+                            $" не в общем списке, пропущена.");
                 }
                 schoolsPurchases.Add(schoolSet);
             }
-          
-            Console.WriteLine(
-                "\n1) Фирмы, где закупало каждое заведение:");
-            for (int i = 0; i < schoolsPurchases.Count; i++)
-            {
-                Console.Write($"   Заведение {i + 1}: ");
-                if (schoolsPurchases[i].Count == 0)
-                {
-                    Console.WriteLine("не закупало нигде");
-                }
-                else
-                {
-                    List<string> list =
-                        new List<string>(schoolsPurchases[i]);
-                    Console.WriteLine(string.Join(", ", list));
-                }
-            }
-           
-            HashSet<string> union = new HashSet<string>();
+            HashSet<string> intersection =
+                new HashSet<string>(allFirmsSet);
             foreach (var set in schoolsPurchases)
             {
-                foreach (string firm in set)
-                {
-                    union.Add(firm);
-                }
+                intersection.IntersectWith(set);
             }
-            Console.WriteLine(
-                "\n2) Фирмы, где закупало" +
-                " хотя бы одно заведение:");
+            Console.WriteLine("\n1) Фирмы, где " +
+                "закупка производилась каждым заведением:");
+            if (intersection.Count == 0)
+            {
+                Console.WriteLine
+                    ("   нет таких (нет общих фирм)");
+            }
+            else
+            {
+                List<string> interList =
+                    new List<string>(intersection);
+                for (int a = 0; a < interList.Count - 1; a++)
+                {
+                    for (int b = 0; b <
+                        interList.Count - 1 - a; b++)
+                    {
+                        if (string.Compare(interList[b],
+                            interList[b + 1]) > 0)
+                        {
+                            string temp = interList[b];
+                            interList[b] = interList[b + 1];
+                            interList[b + 1] = temp;
+                        }
+                    }
+                }
+                Console.WriteLine("   " + 
+                    string.Join(", ", interList));
+            }
+            HashSet<string> union = new HashSet<string>();
+            foreach (var set in schoolsPurchases)
+                foreach (string firm in set)
+                    union.Add(firm);
+            Console.WriteLine("\n2) Фирмы, где закупка" +
+                " производилась хотя бы одним заведением:");
             if (union.Count == 0)
             {
                 Console.WriteLine("   нет таких");
             }
             else
             {
-                List<string> unionList =
+                List<string> unionList = 
                     new List<string>(union);
-                Console.WriteLine
-                    ("   " + string.Join(", ", unionList));
+                for (int a = 0; a < unionList.Count - 1; a++)
+                {   for (int b = 0; b <
+                        unionList.Count - 1 - a; b++)
+                    {
+                        if (string.Compare(unionList[b],
+                            unionList[b + 1]) > 0)
+                        {
+                            string temp = unionList[b];
+                            unionList[b] = unionList[b + 1];
+                            unionList[b + 1] = temp;
+
+                        }
+                    }
+                }
+                Console.WriteLine("   " +
+                    string.Join(", ", unionList));
             }
-           
-            HashSet<string> notBought =
+            
+            HashSet<string> notBought = 
                 new HashSet<string>(allFirmsSet);
             foreach (string firm in union)
-            {
                 notBought.Remove(firm);
-            }
-            Console.WriteLine(
-                "\n3) Фирмы, где ни одно" +
-                " заведение не закупало:");
+            Console.WriteLine("\n3) Фирмы, " +
+                "где ни одно заведение не закупало:");
             if (notBought.Count == 0)
             {
-                Console.WriteLine(
-                    "   нет таких" +
-                    " (все фирмы были использованы)");
+                Console.WriteLine
+                    ("   нет таких " +
+                    "(все фирмы были использованы)");
             }
             else
             {
-                List<string> notList =
+                List<string> notList = 
                     new List<string>(notBought);
-                Console.WriteLine
-                    ("   " + string.Join(", ", notList));
+                for (int a = 0; a <
+                    notList.Count - 1; a++)
+                {   for (int b = 0; b < 
+                        notList.Count - 1 - a; b++)
+                    {
+                        if (string.Compare(notList[b],
+                            notList[b + 1]) > 0)
+                        {
+                            string temp = notList[b];
+                            notList[b] = notList[b + 1];
+                            notList[b + 1] = temp;
+
+                        }
+                    }
+                }
+                Console.WriteLine("   " + 
+                    string.Join(", ", notList));
             }
-            Console.WriteLine(
-              "\nНажмите любую клавишу для продолжения...");
             Console.ReadKey();
         }
 
@@ -298,6 +323,11 @@ namespace Laba7
                     "содержать положительное число.");
                 Console.ReadKey();
                 return;
+            }
+            Console.WriteLine("\nИсходные данные из файла:");
+            for (int i = 1; i <= n && i < lines.Length; i++)
+            {
+                Console.WriteLine($"   {lines[i]}");
             }
             Dictionary<string, int> surnameCount =
                 new Dictionary<string, int>();
