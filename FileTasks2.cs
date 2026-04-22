@@ -17,7 +17,9 @@ namespace Laba7
             foreach (string p in parts)
             {
                 if (int.TryParse(p, out int num))
+                {
                     list.Add(num);
+                }
             }
             if (list.Count == 0)
             {
@@ -38,10 +40,12 @@ namespace Laba7
             }
 
             for (int i = list.Count - 1; i >= 0; i--)
+            {
                 if (list[i] == e)
                 {
                     list.RemoveAt(i);
                 }
+            }
             Console.WriteLine
                 ("Результат: " + string.Join(" ", list));
             Console.WriteLine(
@@ -98,7 +102,9 @@ namespace Laba7
                 StringSplitOptions.RemoveEmptyEntries);
             HashSet<string> allFirmsSet = new HashSet<string>();
             foreach (string f in allFirms)
+            {
                 allFirmsSet.Add(f);
+            }
             if (allFirmsSet.Count == 0)
             {
                 Console.WriteLine("Список фирм пуст.");
@@ -121,10 +127,14 @@ namespace Laba7
                 foreach (string b in buys)
                 {
                     if (allFirmsSet.Contains(b))
+                    {
                         schoolSet.Add(b);
+                    }
                     else
+                    {
                         Console.WriteLine($"Фирма '{b}'" +
                             $" не в общем списке, пропущена.");
+                    }
                 }
                 schoolsPurchases.Add(schoolSet);
             }
@@ -164,8 +174,12 @@ namespace Laba7
             }
             HashSet<string> union = new HashSet<string>();
             foreach (var set in schoolsPurchases)
+            {
                 foreach (string firm in set)
+                {
                     union.Add(firm);
+                }
+            }
             Console.WriteLine("\n2) Фирмы, где закупка" +
                 " производилась хотя бы одним заведением:");
             if (union.Count == 0)
@@ -197,7 +211,9 @@ namespace Laba7
             HashSet<string> notBought = 
                 new HashSet<string>(allFirmsSet);
             foreach (string firm in union)
+            {
                 notBought.Remove(firm);
+            }
             Console.WriteLine("\n3) Фирмы, " +
                 "где ни одно заведение не закупало:");
             if (notBought.Count == 0)
@@ -290,10 +306,14 @@ namespace Laba7
                 "Звонкие согласные, " +
                 "встречающиеся хотя бы в одном слове:");
             if (sortedLetters.Count == 0)
+            {
                 Console.WriteLine("   не найдены");
+            }
             else
-                Console.WriteLine("   " + 
+            {
+                Console.WriteLine("   " +
                     string.Join(", ", sortedLetters));
+            }
             Console.WriteLine(
               "\nНажмите любую клавишу для продолжения...");
             Console.ReadKey();
@@ -355,7 +375,9 @@ namespace Laba7
             }
             Console.WriteLine("\nСформированные логины:");
             for (int i = 0; i < logins.Count; i++)
+            {
                 Console.WriteLine($"   {i + 1}. {logins[i]}");
+            }
             Console.WriteLine(
                 "\nНажмите любую клавишу для продолжения...");
             Console.ReadKey();

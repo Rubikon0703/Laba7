@@ -16,10 +16,15 @@ public static class FileTasks
         {
             path = InputValidator.GetNonEmptyString(
                 "Укажите путь к файлу (или 0 для выхода): ");
-            if (path == "0") return;
+                if (path == "0")
+                {
+                    return;
+                }
             if (File.Exists(path)) break;
-            Console.WriteLine(
+                {
+                    Console.WriteLine(
                 "Файл не существует. Попробуйте снова.");
+                }
         }
         int count = InputValidator.GetEvenPositiveInt(
             "Введите количество чисел (чётное): ");
@@ -33,9 +38,11 @@ public static class FileTasks
             (string path, int count)
     {
         Random rnd = new Random();
-        using (StreamWriter sw = new StreamWriter(path))
-            for (int i = 0; i < count; i++)
-                sw.WriteLine(rnd.Next(-100, 101));
+            using (StreamWriter sw = new StreamWriter(path))
+                for (int i = 0; i < count; i++)
+                {
+                    sw.WriteLine(rnd.Next(-100, 101));
+                }
         Console.WriteLine(
             $"Файл {path} заполнен {count} числами.");
     }
@@ -43,21 +50,31 @@ public static class FileTasks
     private static void SolveTask1(string path)
     {
         List<int> numbers = new List<int>();
-        using (StreamReader sr = new StreamReader(path))
-        {
-            string line;
-            while ((line = sr.ReadLine()) != null)
-                if (int.TryParse(line, out int num))
-                    numbers.Add(num);
-        }
-        if (numbers.Count % 2 != 0)
-            throw new InvalidOperationException(
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                { if (int.TryParse(line, out int num))
+                    {
+                        numbers.Add(num);
+                    }
+                }
+            }   
+            if (numbers.Count % 2 != 0)
+            {
+                throw new InvalidOperationException(
                 "Количество элементов файла нечётно.");
+            }
         int half = numbers.Count / 2;
         int sumFirst = 0, sumSecond = 0;
-        for (int i = 0; i < half; i++) sumFirst += numbers[i];
-        for (int i = half; i < numbers.Count; i++)
-            sumSecond += numbers[i];
+            for (int i = 0; i < half; i++)
+            {
+                sumFirst += numbers[i];
+            }
+            for (int i = half; i < numbers.Count; i++)
+            {
+                sumSecond += numbers[i];
+            }
         Console.WriteLine(
             $"Разность суммы первой и второй половин = " +
             $"{sumFirst - sumSecond}");
@@ -71,8 +88,14 @@ public static class FileTasks
         {
             path = InputValidator.GetNonEmptyString(
                 "Укажите путь к файлу (или 0 для выхода): ");
-            if (path == "0") return;
-            if (File.Exists(path)) break;
+                if (path == "0")
+                {
+                    return;
+                }
+                if (File.Exists(path))
+                {
+                    break;
+                }
             Console.WriteLine(
                 "Файл не существует. Попробуйте снова.");
         }
@@ -99,7 +122,10 @@ public static class FileTasks
                 for (int j = 0; j < count; j++)
                 {
                     sb.Append(rnd.Next(-50, 51));
-                    if (j < count - 1) sb.Append(' ');
+                        if (j < count - 1)
+                        {
+                            sb.Append(' ');
+                        }
                 }
                 sw.WriteLine(sb.ToString());
             }
@@ -115,12 +141,16 @@ public static class FileTasks
             string line;
             while ((line = sr.ReadLine()) != null)
             {
-                string[] parts = line.Split(
+                    string[] parts = line.Split(
                     new char[] { ' ', '\t' },
                     StringSplitOptions.RemoveEmptyEntries);
-                foreach (string part in parts)
-                    if (int.TryParse(part, out int num))
-                        totalSum += num;
+                    foreach (string part in parts)
+                    {
+                        if (int.TryParse(part, out int num))
+                        {
+                            totalSum += num;
+                        }
+                    }
             }
         }
         Console.WriteLine($"Сумма всех чисел = {totalSum}");
@@ -138,8 +168,14 @@ public static class FileTasks
             inputFile = InputValidator.GetNonEmptyString(
                 "Укажите путь к входному файлу " +
                 "(или 0 для выхода): ");
-            if (inputFile == "0") return;
-            if (File.Exists(inputFile)) break;
+            if (inputFile == "0")
+            {
+                return;
+            }
+            if (File.Exists(inputFile))
+            {
+                break;
+            }
             Console.WriteLine(
                 "Файл не существует. Попробуйте снова.");
         }
@@ -158,18 +194,26 @@ public static class FileTasks
         {
             string line;
             while ((line = sr.ReadLine()) != null)
+            {
                 lines.Add(line);
+            }
         }
         if (lines.Count == 0)
+        {
             throw new InvalidOperationException("Файл пуст.");
+        }
         string shortest = lines[0];
         string longest = lines[0];
         for (int i = 1; i < lines.Count; i++)
         {
             if (lines[i].Length < shortest.Length)
+            {
                 shortest = lines[i];
+            }
             if (lines[i].Length > longest.Length)
-                longest = lines[i];
+            {
+                    longest = lines[i]; 
+            }
         }
         using (StreamWriter sw = new StreamWriter(outputFile))
         {
@@ -240,10 +284,12 @@ public static class FileTasks
     {
         List<int> numbers = new List<int>();
         using (BinaryReader br = new BinaryReader(
-            File.Open(path, FileMode.Open)))
-            while (br.BaseStream.Position <
-                    br.BaseStream.Length)
-                numbers.Add(br.ReadInt32());
+        File.Open(path, FileMode.Open)))
+                while (br.BaseStream.Position <
+                        br.BaseStream.Length)
+                {
+                    numbers.Add(br.ReadInt32());
+                }
         return numbers;
     }
 
@@ -251,11 +297,15 @@ public static class FileTasks
         string inputFile, string outputFile)
     {
         List<int> numbers = ReadBinaryFile(inputFile);
-        using (BinaryWriter bw = new BinaryWriter(
-            File.Open(outputFile, FileMode.Create)))
-            foreach (int num in numbers)
-                if (num % 2 == 0)
-                    bw.Write(num);
+            using (BinaryWriter bw = new BinaryWriter(
+                File.Open(outputFile, FileMode.Create)))
+                foreach (int num in numbers)
+                {
+                    if (num % 2 == 0)
+                    {
+                        bw.Write(num);
+                    }
+                }
         Console.WriteLine(
             $"Чётные числа скопированы в {outputFile}");
     }
@@ -293,9 +343,15 @@ public static class FileTasks
             path = InputValidator.GetNonEmptyString(
                 "Укажите путь к XML-файлу " +
                 "(или 0 для выхода): ");
-            if (path == "0") return;
-            if (File.Exists(path)) break;
-            Console.WriteLine(
+            if (path == "0")
+            {
+                return;
+            }
+            if (File.Exists(path))
+            {
+                break;
+            }
+                    Console.WriteLine(
                 "Файл не существует. Попробуйте снова.");
         }
         int passCount = InputValidator.GetPositiveInt(
@@ -369,7 +425,9 @@ public static class FileTasks
             var pb = passengers[i];
             double sum = 0;
             foreach (var item in pb.items)
+            {
                 sum += item.Weight;
+            }
             double avg = sum / pb.items.Length;
             Console.WriteLine(
                 $"Пассажир {i + 1}: предметов = " +
@@ -386,16 +444,20 @@ public static class FileTasks
         List<PassengerBaggage> passengers =
             ReadBaggageFile(path);
         if (passengers == null || passengers.Count == 0)
+        {
             throw new InvalidOperationException(
-                "Файл не содержит данных.");
+            "Файл не содержит данных.");
+        }
         int totalItems = 0;
         double totalWeight = 0.0;
         foreach (var pb in passengers)
+        {
             foreach (var item in pb.items)
             {
                 totalItems++;
                 totalWeight += item.Weight;
             }
+        }
         double overallAvg = totalWeight / totalItems;
         Console.WriteLine(
             $"\nОбщая средняя масса единицы багажа: " +
@@ -408,7 +470,9 @@ public static class FileTasks
             var pb = passengers[i];
             double sumWeight = 0.0;
             foreach (var item in pb.items)
+            {
                 sumWeight += item.Weight;
+            }
             double avg = sumWeight / pb.items.Length;
             if (Math.Abs(avg - overallAvg) <= m)
             {
@@ -418,13 +482,17 @@ public static class FileTasks
                     $"{avg:F2} кг");
                 Console.WriteLine("Состав:");
                 foreach (var item in pb.items)
+                {
                     Console.WriteLine(
-                      $"  - {item.Name}: {item.Weight:F2} кг");
+                    $"  - {item.Name}: {item.Weight:F2} кг");
+                }
             }
         }
         if (!found)
+        {
             Console.WriteLine(
-                "Багаж, удовлетворяющий условию, не найден.");
+            "Багаж, удовлетворяющий условию, не найден.");
+        }
     }
 }
 }

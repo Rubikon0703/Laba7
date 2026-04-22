@@ -48,11 +48,11 @@ namespace Laba7
                 {
                     Console.Write(prompt);
                     string input = Console.ReadLine();
-                if (double.TryParse(input, out result) &&
-                    result >= 0)
-                {
-                    return result;
-                }
+                    if (double.TryParse(input, out result) &&
+                        result >= 0)
+                    {
+                        return result;
+                    }
                     Console.WriteLine
                     ("Ошибка: введите неотрицательное число.");
                 }
@@ -66,7 +66,9 @@ namespace Laba7
                     Console.Write(prompt);
                     string input = Console.ReadLine();
                     if (!string.IsNullOrWhiteSpace(input))
+                    {
                         return input;
+                    }
                     Console.WriteLine
                     ("Ошибка: строка не может быть пустой.");
                 }
@@ -80,7 +82,9 @@ namespace Laba7
                 {
                     string path = GetNonEmptyString(prompt);
                     if (File.Exists(path))
+                    {
                         return path;
+                    }
                     Console.WriteLine("Ошибка: " +
                         "файл не существует. " +
                         "Укажите существующий файл.");
